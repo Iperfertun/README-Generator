@@ -12,18 +12,25 @@ function generateMarkdown(data) {
   ${data.description}
   
   
-  ## Table of Contents 🗒
-  
+  ## The Title of my Project 🗒
+
+  * [Sections entitled](#sections entitled)
+
+  * [Description](#description)
+    
   * [Installations](#dependencies)
   
   * [Usage](#usage)
-  
-  ${renderLink(data.license)}
+
+  * [License](#license)
   
   * [Contributors](#contributors)
   
   * [Test](#test)
+
+  * [Questions](#questions)
   
+  ${renderLink(data.license)}
   
   ## Installations (Dependencies) 💻
   
@@ -46,7 +53,6 @@ function generateMarkdown(data) {
   ${data.contributors}
   
   Contact me at ${data.email}
-  
   
   ## Tests 🧪
   
