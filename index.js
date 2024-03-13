@@ -55,7 +55,7 @@ const questions = [
         type: "input",
         name: "contributors",
         message: "Who are the contributors of this repo?",
-    }
+    },
     {
         type: "list",
         name: "questions",

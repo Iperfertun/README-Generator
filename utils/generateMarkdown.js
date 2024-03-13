@@ -12,9 +12,7 @@ function generateMarkdown(data) {
   ${data.description}
   
   
-  ## The Title of my Project 🗒
-
-  * [Sections entitled](#sections entitled)
+  ## Title of my Project 🗒
 
   * [Description](#description)
     
@@ -27,11 +25,9 @@ function generateMarkdown(data) {
   * [Contributors](#contributors)
   
   * [Test](#test)
-
-  * [Questions](#questions)
-  
   ${renderLink(data.license)}
-  
+  * [Questions](#questions)
+
   ## Installations (Dependencies) 💻
   
   To install dependencies, run these commands:
