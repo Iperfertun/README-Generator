@@ -1,10 +1,10 @@
-// function to genrate markdown for README
+// function to generate markdown for README
 function generateMarkdown(data) {
     return `# ${data.title}
   ${renderBadge(data.license)}
-  `;
+  
   ## Github URL 🌐
-
+  
   [${data.github}](https://github.com/${data.github}/)
   
   ## Description 📝
@@ -59,27 +59,27 @@ function generateMarkdown(data) {
   `;
   }
   
-  //Function to render badge
-  function renderBadge(lincense) {
-  if (license !== "None") {
-    return '[Github license](https://img.shields.io/badge/license-${license}-yellowgreen.svg)'
-  }
-  return ''
-}
-
-//Function to render link
-function renderlink(license) {
+  // Function to render badge
+  function renderBadge(license) {
     if (license !== "None") {
-        return ( 
-            '\n* [License](#license)\n'
-          )
-        }
-        return ''
-      }
-
- 
-// Function to render section
-function renderSection(license) {
+      return `![GitHub license](https://img.shields.io/badge/license-${license}-yellowgreen.svg)`
+    }
+    return ''
+  }
+  
+  // Function to render link
+  function renderLink(license) {
+    if (license !== "None") {
+      return (
+        `\n* [License](#license)\n`
+      )
+    }
+    return ''
+  }
+  
+  
+  // Function to render section
+  function renderSection(license) {
     if (license !== "None") {
       return (
         `## License 📛
@@ -93,4 +93,5 @@ function renderSection(license) {
     return ''
   }
   
-module.exports = generateMarkdown;
+  module.exports = generateMarkdown;
+  

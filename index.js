@@ -1,9 +1,10 @@
+// All the dependency
 const fs = require("fs");
 const path = require('path');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// array of questions for user to generate README.md
+// Array of questions for user to generate README.md
 const questions = [
 
     {
@@ -18,10 +19,10 @@ const questions = [
         message: "what is your email?"
     },
     {
-        type:"input",
-        name:"description", 
-        message:"what is name of your project:"
-    }, 
+        type: "input",
+        name: "title",
+        message: "What's the name of your project?"
+    },
     {
         type:"input",
         name:"description",
@@ -55,21 +56,21 @@ const questions = [
         name: "contributors",
         message: "Who are the contributors of this repo?",
     }
+
 ];
 
 // function to write README file
 function writeToFile(fileName, data) {
-    return fs.writeFileSync(path.join(process.cwd (), filename), data);
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
 // function to initialize program
 function init() {
-    inquirer
-    .prompt(questions)
-    .then ((inquirerAnswers) => {
-        console.log("Generating.... Please wait....");
-        writeToFile("./dist/README.md",generateMarkdown({ ...inquirerAnswers }));
-    })
+    inquirer.prompt(questions)
+        .then((inquirerAnswers) => {
+            console.log("Generating.... Please wait....");
+            writeToFile("./dist/README.md", generateMarkdown({ ...inquirerAnswers }));
+        })
 }
 
 // function call to initialize program
