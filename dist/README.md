@@ -23,11 +23,9 @@
   * [Contributors](#contributors)
   
   * [Test](#test)
-
   
 * [License](#license)
 
-  
   * [Questions](#questions)
 
   ## Installations (Dependencies) 💻
