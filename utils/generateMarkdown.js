@@ -23,11 +23,11 @@ function generateMarkdown(data) {
   * [License](#license)
   
   * [Contributors](#contributors)
-  
-  * [Test](#test)
-   ${renderLink(data.license)}
-  * [Questions](#questions)
 
+  * [Test](#test)
+  * [Questions](#questions)
+  ${renderLink(data.license)}
+  
   ## Installations (Dependencies) 💻
   
   To install dependencies, run these commands:
